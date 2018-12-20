@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        app:layout_constraintBaseline_toBaselineOf="@+id/save"
+        app:layout_constraintEnd_toStartOf="@+id/save" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        app:layout_constraintEnd_toStartOf="@id/load" />
+
+    <Button
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOAD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/save"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clear" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_status"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petunjuk"
+        tools:listitem="@layout/item_row" />
+
+
+    <TextView
+        android:id="@+id/janji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resky Ramadhandi Santoso; NIM: 1607479; Saya berjanji tidak berbuat curang dan atau membantu orang lain berbuat curang"
+        app:layout_constraintTop_toBottomOf="@id/clear"
+        android:textAlignment="center"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/petunjuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posisikan HP anda seperti diletakkan di dashboard mobil, gerakkan ke depan lalu stop mendadak (simulasi pengereman)"
+        app:layout_constraintTop_toBottomOf="@id/janji"
+        android:textAlignment="center"
+        android:layout_margin="20dp"/>
+
+</android.support.constraint.ConstraintLayout>
